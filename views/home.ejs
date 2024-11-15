@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="/style.css" type="text/css">
+    <title>Welcome to Facebook</title>
+</head>
+
+<body>
+    <h1>Welcome to Facebook</h1>
+    <div>
+        <form class="newPost" action="/add-post" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Write your name" >
+
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" placeholder="Write your message "></textarea>
+
+            <button>Add a Post</button>
+            <h3 class="error">
+                <%= err%>
+            </h3>
+        </form>
+    </div>
+    <div class="posts">
+        <% if(data.length> 0) { %>
+            <%data.forEach(post=> { %>
+                <div class="post-info">
+                    <div class="post">
+                        <h3>
+                            <%= post.name%>
+                            <span><%= post.createdAt %></span>
+                        </h3>
+                        <p>
+                            <%= post.message %>
+                        </p>
+                        <a href="/feed/<%= post._id %>">See More</a>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+                <p>There is no posts</p>
+            <% } %>
+    </div>
+</body>
+
+</html>

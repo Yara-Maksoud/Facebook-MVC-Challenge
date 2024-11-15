@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 95%;
+    margin: 0px auto;
+    padding: 1rem;
+}
+
+h1 {
+    border-bottom: 1px, solid, black;
+    margin-bottom: 30px;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10px;
+}
+
+.post-info {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 10px;
+    background-color: white;
+    border-left: 6px solid rgb(21, 86, 139);
+
+}
+
+ a, h3 {
+    color: rgb(21, 86, 139);
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.post h3 span {
+    color: rgb(99, 99, 99);
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.post p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+a:hover{
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.newPost {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+    padding: 10px;
+    
+}
+
+button {
+    width: 10%;
+    height: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(21, 86, 139);
+    margin-top: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#name {
+    height: 25px;
+    width: 80%;
+    border: solid 2px black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#message {
+    height: 100px;
+    width: 80%;
+    border: solid 2px black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.error{
+    color:rgb(146, 33, 33)
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="/style.css" type="text/css">
+    <title>Show One Page</title>
+</head>
+<body> 
+    <div class="header">
+        <a href="/feed">Back</a>
+        <h1>Welcome to Facebook</h1>
+    </div>
+    
+    <div class="post">
+        <h3><%= post.name%><span><%= post.createdAt %></span></h3>
+        <p><%= post.message %></p>
+    </div>   
+    
+    <div>
+        <a href="/feed/edit/<%= post._id %>"><button>Edit Post</button></a>
+        <a href="/deletePost/<%= post._id %>"><button>Delete</button></a>
+    </div>
+   
+</body>
+</html>
